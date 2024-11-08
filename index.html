@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Controle de Produtos - Supermercado</title>
+    <!-- Importando a fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Contêiner de autenticação -->
+    <div id="auth-container" class="auth-container">
+        <!-- Seção de Login -->
+        <div class="login-container">
+            <header class="logo">
+                <span class="efi">Efi</span><span class="stock">stock</span>
+            </header>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email" class="visually-hidden">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password" class="visually-hidden">Senha</label>
+                    <input type="password" id="login-password" name="password" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="auth-btn">ENTRAR</button>
+            </form>
+            <div class="links">
+                <a href="#" onclick="showPasswordRecovery()">Esqueci minha senha</a>
+                <span>|</span>
+                <a href="#" onclick="showRegister()">Criar conta</a>
+            </div>
+            <footer class="footer">
+                <p>© 2024 | Desenvolvido por <span class="developer">Efistock</span></p>
+            </footer>
+        </div>
+
+        <!-- Seção de Registro -->
+        <div class="register-container" style="display: none;">
+            <header class="logo">
+                <span class="efi">Efi</span><span class="stock">stock</span>
+            </header>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="new-email" class="visually-hidden">Email</label>
+                    <input type="email" id="new-email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-password" class="visually-hidden">Senha</label>
+                    <input type="password" id="new-password" name="password" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="auth-btn">CADASTRAR</button>
+            </form>
+            <div class="links">
+                <a href="#" onclick="showLogin()">Já tenho conta</a>
+            </div>
+            <footer class="footer">
+                <p>© 2024 | Desenvolvido por <span class="developer">Efistock</span></p>
+            </footer>
+        </div>
+
+        <!-- Seção de Recuperação de Senha -->
+        <div class="password-recovery-container" style="display: none;">
+            <header class="logo">
+                <span class="efi">Efi</span><span class="stock">stock</span>
+            </header>
+            <form id="recovery-form">
+                <div class="input-group">
+                    <label for="recovery-email" class="visually-hidden">Email</label>
+                    <input type="email" id="recovery-email" name="email" placeholder="Email" required>
+                </div>
+                <button type="submit" class="auth-btn">RECUPERAR SENHA</button>
+            </form>
+            <div class="links">
+                <a href="#" onclick="showLogin()">Voltar ao login</a>
+            </div>
+            <footer class="footer">
+                <p>© 2024 | Desenvolvido por <span class="developer">Efistock</span></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav class="navbar" style="display: none;">
+        <a href="#" class="back-button" onclick="goBack()">Voltar</a>
+        <a href="#" class="logout-button" onclick="logout()">Sair</a>
+    </nav>
+
+    <!-- Novo cabeçalho -->
+    <header class="header" style="display: none;">
+        <h1>Sistema de Controle de Produtos</h1>
+        <p>Gerencie seu estoque de forma eficiente</p>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main id="page-content" class="container" style="display: none;">
+        <!-- O conteúdo será inserido aqui pelo JavaScript -->
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2024 | Desenvolvido por <span class="developer">Efistock</span> | Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
